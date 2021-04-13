@@ -1,0 +1,10 @@
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: truncate table
+    truncate:
+        database: "test1"
+        table_name:
+            - tt1
+        
+    

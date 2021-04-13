@@ -1,0 +1,35 @@
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: create database 1
+    create:
+        type: database
+        name: test8
+
+  - name: create table
+    create:
+        type: table
+        name: ttt8
+        columns:
+            - firstname VARCHAR(30) NOT NULL
+            - lastname VARCHAR(30) NOT NULL
+            - email VARCHAR(50)
+
+  tasks:
+  - name: insert into table 1
+    insert:
+        table: ttt8
+        columns:
+            - firstname
+            - lastname
+        values:
+            - "'pranav', 'pathak'"
+            - "'abc', 'efg'"
+
+  - name: insert into table 2
+    insert:
+        table: ttt8
+        values:
+            - "'a' , 'b' , 'a@b'"
+            - "'c' , 'd' , 'c@d'"
+            - "'e' , 'f' , 'e@f'"

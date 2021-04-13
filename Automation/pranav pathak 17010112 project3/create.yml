@@ -1,0 +1,48 @@
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: create database 1
+    create:
+        type: database
+        name: test8
+        
+  - name: create table
+    create:
+        type: table
+        name: ttt8
+        database: test4
+        columns:
+            - firstname VARCHAR(30) NOT NULL
+            - lastname VARCHAR(30) NOT NULL
+            - email VARCHAR(50)
+  - name: create role
+    create:
+        type: role
+        role:
+             - 'admin'
+             - 'student'
+             - "'automation'@'localhost'"
+
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: create database 2
+    create:
+        type: database
+        name: test22       
+  - name: create table 2
+    create:
+        type: table
+        name: ttt212
+        columns:
+            - firstname VARCHAR(30) NOT NULL
+            - lastname VARCHAR(30) NOT NULL
+            - email VARCHAR(50)
+            
+  - name: create role
+    create:
+        type: role
+        role:
+             - 'admin'
+             - 'student'
+             - "'automation'@'localhost'"

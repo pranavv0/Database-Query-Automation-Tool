@@ -1,0 +1,41 @@
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: insert into table 1
+    insert:
+        table: ttt4
+        columns:
+            - firstname
+            - lastname
+        values:
+            - "'pranav', 'pathak'"
+            - "'abc', 'efg'"
+        
+  - name: insert into table 2
+    insert:
+        table: ttt3
+        values:
+            - "'a' , 'b' , 'a@b'"
+            - "'c' , 'd' , 'c@d'"
+            - "'e' , 'f' , 'e@f'"
+
+- group: aws
+  dbName: mysql
+  tasks:
+  - name: insert into table 1
+    insert:
+        table: ttt2
+        columns:
+            - firstname
+            - lastname
+        values:
+            - "'pranav', 'pathak'"
+            - "'abc', 'efg'"
+        
+  - name: insert into table 2
+    insert:
+        table: ttt1
+        values:
+            - "'a' , 'b' , 'a@b'"
+            - "'c' , 'd' , 'c@d'"
+            - "'e' , 'f' , 'e@f'"

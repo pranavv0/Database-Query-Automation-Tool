@@ -1,0 +1,101 @@
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: drop from mysql
+    drop:
+        type: table
+        name:
+            - "newName"
+        temporary: yes
+        restrict: yes
+        cascade: no
+  - name: drop from mysql
+    drop:
+        type: database
+        name:
+            - "newName"   
+  - name: drop from mysql
+    drop:
+        type: schema
+        name:
+            - "newName"             
+  - name: drop from mysql
+    drop:
+        type: function
+        name:
+            - "newName"
+  - name: drop from mysql
+    drop:
+        type: procedure
+        name:
+            - "newName"            
+  - name: drop from mysql
+    drop:
+        type: index
+        index_name:
+            - "newName"
+        table_name:
+            - "newName"
+        algorithm: default
+        lock: default
+     
+  - name: drop from mysql
+    drop:
+        type: logfile
+        logfile_group:
+            - "newName"
+        engine: "engine_name"
+       
+  - name: drop from mysql
+    drop:
+        type: server
+        server_name:
+            - "name"
+        
+  - name: drop from mysql
+    drop:
+        type: spatial_reference_system
+        srid: 
+            - 4210
+        
+  - name: drop from mysql
+    drop:
+        type: tablespace
+        tablespace_name:
+            - "name"
+        undo: yes
+        engine: "engine_name"
+            
+  - name: drop from mysql
+    drop:
+        type: trigger
+        schema_name: "name"        
+        trigger_name:
+            - "name"  
+  - name: drop from mysql
+    drop:
+        type: view
+        view_name:
+            - "name"        
+        restrict: yes
+        cascade: yes             
+  - name: drop from mysql
+    drop:
+        type: event
+        event_name:
+            - "newName"   
+  - name: drop from mysql
+    drop:
+        type: user
+        user_name:
+            - "Name"   
+  - name: drop from mysql
+    drop:
+        type: role
+        name:
+            - "Name"            
+            
+            
+            
+            
+               

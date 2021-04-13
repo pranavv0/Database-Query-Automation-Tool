@@ -1,0 +1,17 @@
+- group: psql
+  dbName: psql
+  tasks:
+  - name: create database 1
+    create:
+        type: database
+        name: test4
+        
+  - name: create table
+    create:
+        type: table
+        name: ttt5
+        database: test4
+        columns:
+            - firstname VARCHAR(30) NOT NULL
+            - lastname VARCHAR(30) NOT NULL
+            - email VARCHAR(50)

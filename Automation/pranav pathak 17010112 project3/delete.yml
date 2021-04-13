@@ -1,0 +1,24 @@
+- group: aws
+  dbName: mysql
+  tasks:
+  - name: delete table
+    delete:
+        low_priority: yes
+        ignore: yes
+        quick: yes
+            
+        partition_name_list:
+            - partition1
+            - partition2
+        table_reference: 
+            - ttt2
+        #from_table_reference:
+         #   - t1 INNER JOIN t2 INNER JOIN t3
+        #using_table_reference:
+           # - t1 INNER JOIN t2 INNER JOIN t3    
+        where_condition:
+            - condition
+        order_by: id
+        
+        limit_row_count: 1
+        

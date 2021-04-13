@@ -1,0 +1,9 @@
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: executing query directly
+    command:
+        query:
+            - "show databases"
+            - "show tables"
+        commit: no

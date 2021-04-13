@@ -1,0 +1,32 @@
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: alter table ttt1
+    alter:
+        table: ttt1
+        add:
+           - id varchar(255)
+           - middle varchar(255) 
+           - DateOfBirth year
+  - name: delete lastname
+    alter:
+        table: ttt1
+        drop:
+            - lastname
+  - name: modify table column
+    alter:
+        table: ttt1
+        modify:
+            - DateOfBirth date
+  - name: rename column
+    alter:
+        table: ttt1
+        renameColumn:
+            - email emailer VARCHAR(100)  NULL
+  - name: rename table name
+    alter:
+        table: ttt1
+        renameTable:
+            - newName
+    
+            

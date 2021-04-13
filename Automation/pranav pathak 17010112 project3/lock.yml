@@ -1,0 +1,13 @@
+- group: remote
+  dbName: mysql
+  tasks:
+  - name: lock table
+    lock:
+        database: test1
+        table_name: 
+            - tt1
+            - tt1 as t1
+        lock_type:
+            - read
+            - write
+             
